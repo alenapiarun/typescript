@@ -13,10 +13,10 @@ interface Array<T> {
 interface IMap<T, U> {
     entries(): IterableIterator<[T, U]>;
     forEach(callbackFn: (value: U, key: T, map: IMap<T, U>)=> void): void;
-    get(key: T): U;
+    get(key: T): U | undefined;
     has(key: T): boolean;
     keys(): IterableIterator<T>;
-    set(key: T, value?: U): IMap<T, U>;
+    set(key: T, value: U): IMap<T, U>;
     values(): IterableIterator<U>;
 }
 
